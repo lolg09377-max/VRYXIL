@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vryxil Magical Typing - 22K 12D Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Orbitron:wght@500;700;900&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-hacker">
+
+    <div class="vryxil-os">
+        
+        <div class="header-panel">
+            <div class="brand-name" id="brandText">VRYXIL MAGICAL TYPING <span>CREATED BY ENG. RANA</span></div>
+            <div class="controls-right">
+                <button id="sysLangBtn" class="sys-lang-btn">SYSTEM LANGUAGE: ENGLISH</button>
+                <button id="kbLangBtn" class="lang-toggle-btn">KEYBOARD: ENGLISH</button>
+                <button id="beginnerBtn" class="beginner-toggle-btn">BEGINNER HANDMAP: OFF</button>
+                <button id="soundBtn" class="sound-toggle-btn">SOUND: ON</button>
+                <button id="themeBtn" class="theme-toggle-btn">THEME: GHOST</button>
+                <button id="modeBtn" class="mode-toggle-btn">BUBBLE TYPE GAME</button>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="stat-card">
+                <small id="wpmLabel">TYPING SPEED</small>
+                <div id="wpm">00<span class="unit"> WPM</span></div>
+            </div>
+            <div class="stat-card">
+                <small id="accLabel">ACCURACY</small>
+                <div id="accuracy">100<span class="unit">%</span></div>
+            </div>
+            <div class="stat-card position-card">
+                <small id="statusLabel">LIVE FINGER MAP</small>
+                <div id="statusText" style="color:var(--magic-cyan);">READY <span style="font-size:0.6rem;">●</span></div>
+            </div>
+        </div>
+
+        <div class="main-workspace">
+            <div id="trainerModeZone" class="workspace-mode active">
+                <div class="matrix-container">
+                    <div class="focus-alert" id="targetAlert">TARGET ACQUIRED</div>
+                    <div class="matrix-display" id="matrixDisplay"></div>
+                </div>
+            </div>
+
+            <div id="arcadeModeZone" class="workspace-mode">
+                <div class="arcade-hud">
+                    <div class="hud-box">
+                        <span id="scoreLabel">SCORE: </span>
+                        <span id="gameScore" class="highlight-green">000</span>
+                    </div>
+                    <div class="hud-box">
+                        <span id="livesLabel">LIVES: </span>
+                        <span id="gameLives" class="highlight-red">❤️❤️❤️</span>
+                    </div>
+                </div>
+                <canvas id="arcadeCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="magic-keyboard-container" id="keyboardContainer"></div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

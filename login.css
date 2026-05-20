@@ -1,0 +1,57 @@
+/* =========================================
+   🔒 VRYXIL LOGIN PORTAL STYLES
+   ========================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'JetBrains Mono', monospace; }
+
+body { background-color: #000000; color: #39ff14; height: 100vh; display: flex; justify-content: center; align-items: center; background-image: radial-gradient(circle at center, #0a1a0a 0%, #000000 100%); overflow: hidden; }
+
+.login-container { background: #040804; width: 100%; max-width: 480px; padding: 35px 30px; border-radius: 16px; border: 1px solid rgba(57, 255, 20, 0.4); box-shadow: 0 0 40px rgba(57, 255, 20, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.9); position: relative; transition: height 0.3s ease; }
+.login-container::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, #39ff14, transparent, #00ffff, transparent); z-index: -1; border-radius: 18px; animation: animateBorder 4s linear infinite; }
+
+@keyframes animateBorder { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
+
+.brand-header { text-align: center; margin-bottom: 25px; }
+.brand-header h1 { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 900; color: #ffffff; text-shadow: 0 0 15px #39ff14; letter-spacing: 1px; }
+.brand-header h1 span { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+.brand-header p { font-size: 0.65rem; color: #1f8a09; margin-top: 5px; letter-spacing: 2px; font-weight: bold; }
+
+.sys-msg { margin-top: 10px; padding: 6px; font-size: 0.7rem; font-weight: bold; border-radius: 4px; border: 1px dashed #1f8a09; color: #1f8a09; background: #020502; }
+.sys-msg.error { border-color: #ff0000; color: #ff0000; text-shadow: 0 0 5px #ff0000; box-shadow: inset 0 0 10px rgba(255,0,0,0.2); }
+.sys-msg.success { border-color: #39ff14; color: #39ff14; text-shadow: 0 0 5px #39ff14; box-shadow: inset 0 0 10px rgba(57,255,20,0.2); }
+
+.login-form { display: flex; flex-direction: column; gap: 15px; }
+.input-group { display: flex; flex-direction: column; gap: 5px; }
+.input-group label { font-size: 0.7rem; color: #1f8a09; font-weight: bold; }
+.input-group input { background: #020502; border: 1px solid #134d05; color: #39ff14; padding: 12px 15px; border-radius: 6px; font-size: 0.9rem; outline: none; transition: all 0.3s ease; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); width: 100%; }
+.input-group input:focus { border-color: #39ff14; box-shadow: 0 0 10px rgba(57, 255, 20, 0.3), inset 0 2px 5px rgba(0,0,0,0.5); }
+
+.password-wrapper { position: relative; display: flex; align-items: center; width: 100%; }
+.eye-btn { position: absolute; right: 10px; background: none; border: none; color: #39ff14; cursor: pointer; font-size: 0.9rem; }
+.eye-btn:hover { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+
+.primary-btn { background: #1a1a1a; color: #39ff14; border: 1px solid #39ff14; padding: 12px; border-radius: 6px; font-family: 'Orbitron', sans-serif; font-weight: bold; font-size: 0.9rem; cursor: pointer; letter-spacing: 1px; transition: all 0.3s ease; margin-top: 5px; }
+.primary-btn:hover { background: #39ff14; color: #000; box-shadow: 0 0 20px #39ff14; }
+.register-btn { border-color: #00ffff; color: #00ffff; }
+.register-btn:hover { background: #00ffff; color: #000; box-shadow: 0 0 20px #00ffff; }
+
+.extra-links { display: flex; justify-content: space-between; margin-top: 5px; }
+.extra-links a { color: #00ffff; text-decoration: none; font-size: 0.75rem; font-weight: bold; transition: color 0.2s; }
+.extra-links a:hover { color: #ffffff; text-shadow: 0 0 8px #00ffff; }
+
+.divider { text-align: center; margin: 20px 0; position: relative; }
+.divider::before { content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: #134d05; z-index: 1; }
+.divider span { background: #040804; padding: 0 10px; color: #1f8a09; font-size: 0.65rem; font-weight: bold; position: relative; z-index: 2; }
+
+.social-login-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.social-btn { padding: 10px; border: none; border-radius: 6px; font-weight: bold; font-family: 'JetBrains Mono', sans-serif; font-size: 0.75rem; cursor: pointer; transition: all 0.3s ease; color: #fff; text-align: center; opacity: 0.8; }
+.social-btn.google { background: #db4437; }
+.social-btn.facebook { background: #4267B2; }
+.social-btn.outlook { background: #0078D4; }
+.social-btn.yahoo { background: #410093; }
+.social-btn.instagram { grid-column: span 2; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-btn:hover { transform: translateY(-2px); opacity: 1; box-shadow: 0 4px 15px rgba(255,255,255,0.2); }
+
+.admin-dashboard { background: #000; padding: 15px; border-radius: 8px; border: 1px dashed #ff003c; max-height: 200px; overflow-y: auto; }
+.user-list { list-style: none; }
+.user-list li { padding: 8px; border-bottom: 1px solid #134d05; font-size: 0.8rem; color: #00ffff; }
+.user-list li span { color: #39ff14; margin-right: 10px; font-weight: bold; }

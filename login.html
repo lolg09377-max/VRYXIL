@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vryxil Magical Typer - Secure Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="brand-header">
+            <h1>VRYXIL <span>MAGICAL TYPER</span></h1>
+            <p>QUANTUM ENCRYPTED AUTHENTICATION</p>
+            <div id="systemMessage" class="sys-msg">SYSTEM: AWAITING INPUT...</div>
+        </div>
+
+        <div id="loginSection">
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label>CYBER ID / EMAIL</label>
+                    <input type="text" id="loginEmail" placeholder="Enter your registered ID..." required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label>SECURITY KEY (PASSWORD)</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="loginPassword" placeholder="••••••••••••" required>
+                        <button type="button" class="eye-btn" onclick="togglePassword()">👁️</button>
+                    </div>
+                </div>
+                
+                <button type="submit" class="primary-btn" id="loginBtn">LOGIN</button>
+                
+                <div class="extra-links">
+                    <a href="#" id="forgotPass">Reset Security Key?</a>
+                    <a href="#" onclick="togglePortal('register')">No ID? Register Here</a>
+                </div>
+            </form>
+
+            <div class="divider"><span>OR SECURE LOGIN VIA</span></div>
+
+            <div class="social-login-grid">
+                <button class="social-btn google" onclick="socialAutoLogin('Google')">🌐 Google</button>
+                <button class="social-btn facebook" onclick="socialAutoLogin('Facebook')">📘 Facebook</button>
+                <button class="social-btn outlook" onclick="socialAutoLogin('Outlook')">✉️ Outlook</button>
+                <button class="social-btn yahoo" onclick="socialAutoLogin('Yahoo')">🟣 Yahoo</button>
+                <button class="social-btn instagram" onclick="socialAutoLogin('Instagram')">📸 Instagram</button>
+            </div>
+        </div>
+
+        <div id="registerSection" style="display: none;">
+            <form id="registerForm" class="login-form">
+                <div class="input-group">
+                    <label>NEW CYBER ID / EMAIL</label>
+                    <input type="email" id="regEmail" placeholder="Create a new ID..." required autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label>CREATE SECURITY KEY</label>
+                    <input type="password" id="regPassword" placeholder="Minimum 6 characters..." required minlength="6">
+                </div>
+                
+                <button type="submit" class="primary-btn register-btn" id="regBtn">GENERATE SECURE ID</button>
+                
+                <div class="extra-links" style="justify-content: center; margin-top: 15px;">
+                    <a href="#" onclick="togglePortal('login')">⬅ Back to Login Portal</a>
+                </div>
+            </form>
+        </div>
+
+        <div id="adminSection" style="display: none;">
+            <h3 style="color: #ff003c; text-align: center; font-family: 'Orbitron'; margin-bottom: 15px;">⚠️ ADMIN CONTROL PANEL</h3>
+            <div class="admin-dashboard">
+                <p style="font-size: 0.75rem; color: #1f8a09; margin-bottom: 10px;">REGISTERED CYBER IDs:</p>
+                <ul id="userList" class="user-list"></ul>
+            </div>
+            <button class="primary-btn" onclick="togglePortal('login')" style="width: 100%; margin-top: 15px;">LOGOUT ADMIN</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
